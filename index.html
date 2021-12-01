@@ -17,20 +17,28 @@
 	crossorigin="anonymous"></script>
 
     <script>
-        const copyToClipboard = str => {
-            const el = document.createElement('textarea');
-            el.value = str;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-        };
+        // const copyToClipboard = str => {
+        //     const el = document.createElement('textarea');
+        //     el.value = str;
+        //     document.body.appendChild(el);
+        //     el.select();
+        //     document.execCommand('copy');
+        //     document.body.removeChild(el);
+        // };
 
-        const url = "play.unsmp.xyz";
-        document.getElementById('copyItem').addEventListener("click", function(e){
-            copyToClipboard(url);
-            alert(url + " has been copied to the clipboard. Please open Minecraft to play in this server.")
-        })
+        // const url = "play.unsmp.xyz";
+        // document.getElementById('copyItem').addEventListener("click", function(e){
+        //     copyToClipboard(url);
+        //     alert(url + " has been copied to the clipboard. Please open Minecraft to play in this server.")
+        // })
+
+        function copyText(){
+            var url = "play.unsmp.xyz";
+            var textCopy = document.getElementById("copyLink");
+            textCopy.value = url + text;    
+            document.execCommand("copy");
+        }
+
     </script>
 
     <style>
@@ -82,7 +90,7 @@
     </style>
 </head>
 <body>
-    <button id="copyItem"><h1>Page Not Found</h1></button>
+    <div id="copyLink" onclick="copyText()"><h1>Page Not Found</h1></div>
     <p>Sorry, but the page you were trying to view does not exist.</p>
 </body>
 </html>
