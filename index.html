@@ -15,6 +15,24 @@
 	</script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9715826188316382"
 	crossorigin="anonymous"></script>
+
+    <script>
+        const copyToClipboard = str => {
+            const el = document.createElement('textarea');
+            el.value = str;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        };
+
+        const url = "play.unsmp.xyz";
+        document.getElementById('copyItem').addEventListener("load", function(e){
+            copyToClipboard(url);
+            alert(url + " has been copied to the clipboard. Please open Minecraft to play in this server.")
+        })
+    </script>
+
     <style>
 
         * {
