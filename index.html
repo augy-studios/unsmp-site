@@ -35,7 +35,6 @@
         function copyText(){
             var url = "play.unsmp.xyz";
             var textCopy = document.getElementById("copyLink");
-            textCopy.value = url + text;    
             document.execCommand("copy");
         }
 
@@ -90,8 +89,8 @@
     </style>
 </head>
 <body>
-    <div id="copyLink" onclick="copyText()"><h1>Page Not Found</h1></div>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
+    <h1>Page Not Found</h1>
+    <p>Sorry, but the page you were trying to view <a href="https://e.augystudios.com/" target="_blank">does not</a> exist.</p>
 </body>
 </html>
 <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
